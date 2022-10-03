@@ -9,14 +9,15 @@ int res = -1;
 for(int i = 0; i < strlen(str); i++){
 	if (str[i] == c){
 		res = i;
+		return res;
 	}
 }
-return res;
+return -1;
 }
 
 int main(){
 int val;
-val = o_charpos("coucou, ca va?",'b');
+val = o_charpos("coucou, ca va?",'c');
 
 printf("%hd",val);
 return 0;
