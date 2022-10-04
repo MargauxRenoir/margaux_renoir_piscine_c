@@ -4,14 +4,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main( int argc, char * argv[] ) {
+int main( int argc, char * argv[] ) 
+{
+    char *question = "Quel est votre nom? ";
+    char *nom;
 
-char *question = "Quel est votre nom? ";
-char *nom;
+    write(1,question,strlen(question));
+    scanf("%s", nom);
 
-write(1,question,strlen(question));
-scanf("%s", nom);
-
-write(1,nom,strlen(nom));
-return 0;
+    write(1,nom,strlen(nom));
+    return 0;
 }
