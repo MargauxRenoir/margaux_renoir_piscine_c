@@ -1,6 +1,10 @@
 #include <stdio.h>
-int main() {
-write(1,"hello word\n",10);
-return 0;
+#include <stdlib.h>
+#include <string.h>
+
+int main() 
+{
+    write(1,"hello world\n",10);
+    return 0;
 }
 
