@@ -44,10 +44,12 @@ char * o_strncpy(char *dest2, const char *src, int n)
 
 int main()
 {
+    // Test fonction o_strcpy
     char * dest = malloc(strlen("Aurevoir"));
     o_strcpy(dest,"Aurevoir");
     printf("dest : %s \n", dest);
 
+    //Test fonction o_strncpy
     int n = 10;
     char * dest2 = malloc(n);
     o_strncpy(dest2,"Aurevoir \n",n);
