@@ -2,7 +2,7 @@
 
 int main() 
 {
-    write(1,"hello world\n",11);
+    write(1,"hello world\n",strlen("hello world\n"));
     return 0;
 }
 
