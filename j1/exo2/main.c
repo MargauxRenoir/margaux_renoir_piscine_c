@@ -1,18 +1,21 @@
 #include <stdio.h>
-int main() {
-int i = 49;
-int cpt = 0;
+#include <stdlib.h>
+#include <string.h>
 
-while (cpt < 9)
+int main() 
 {
-   
-write(1,&i,1);
-write(1,"\n",1);
-i++;
-cpt++;
-}
+    int i = 49;
+    int cpt = 0;
 
-write(1,"10\n",2);
-return 0;
+    while (cpt < 9)
+    {
+        write(1,&i,1);
+        write(1,"\n",1);
+        i++;
+        cpt++;
+    }
+
+    write(1,"10\n",2);
+    return 0;
 }
 
