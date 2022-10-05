@@ -3,33 +3,47 @@
 // Prototype: void o_print_number(int nb)
 
 #include <unistd.h>
+#include <string.h>
 
 void o_print_number(int nb)
 {
     if(nb < 0)
     {
-        write(1,'-',1);
+        write(1,"-",1);
         nb = -nb;
     }
-    // if(nb <= 9)
-    // {
-    //     write(1,&(nb)+48,1);
-    // }
 
-    if(nb < 9)
-    {
-        o_print_number(nb / 10);
-		o_print_number(nb % 10);
+    if(nb <= 9)
+    {   nb = nb + 48;
+        write(1,&nb,1);
     }
 
     else
     {
-        write(1,&(nb)+48,1);
+        o_print_number(nb / 10);
+		o_print_number(nb % 10);
     }
     
 }
 
 int main()
 {
-    o_print_number(331);
+    write(1,"On veut ecrire -1 : ",strlen("On veut ecrire -1 \n"));
+    o_print_number(-1);
+    write(1,"\n",strlen("\n"));
+
+    write(1,"On veut ecrire -10 : ",strlen("On veut ecrire -10 \n"));
+    o_print_number(-10);
+    write(1,"\n",strlen("\n"));
+
+    write(1,"On veut ecrire 10 : ",strlen("On veut ecrire 10 \n"));
+    o_print_number(10);
+    write(1,"\n",strlen("\n"));
+
+    write(1,"On veut ecrire 333 : ",strlen("On veut ecrire 333 \n"));
+    o_print_number(333);
+    write(1,"\n",strlen("\n"));
+
+    write(1,"On veut ecrire 152718 : ",strlen("On veut ecrire 152718 \n"));
+    o_print_number(152718);
 }
