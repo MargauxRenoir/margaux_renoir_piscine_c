@@ -8,12 +8,13 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 
 int o_strlen(char *str)
 {
     int cpt = 0;
-    while(str[cpt] != 0)
+    while(str[cpt] != '\0')
     {
         cpt++;
     }
@@ -74,7 +75,7 @@ char * o_strcat(char *str1, char *str2)
 int main()
 {
     // Test fonction o_strlen
-    int taille = o_strlen("Bonjour");
+    int taille = o_strlen("Hello");
     printf("taille = %hd\n",taille);
 
     // Test fonction o_strcmp
