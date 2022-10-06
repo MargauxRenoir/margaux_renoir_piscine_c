@@ -22,16 +22,22 @@ int o_strlen(char *str)
 char * o_strcat(char *str1, char *str2)
 {
     int taille1 = o_strlen(str1);
-    printf("La taille de taille1 est : %d \n",taille1);
-    int i;
-    for(i = 0; str1[i] != 0 ; i++)
+    //printf("str1: %d \n",*str1);
+    int i = 0;
+    if(str1 == NULL )
     {
-        printf("str1[i] = %s \n",str1[i]);
-        str1[taille1 + i] = str2[i];
-    }  
-
-    str1[i] = '\0';
-
+        str1 = str2;
+    }
+    else
+    {
+        for(i = 0; str2[i] != 0 ; i++)
+        {
+            //printf("str1[i] = %s \n",str1[i]);
+            str1[taille1 + i] = str2[i];
+        } 
+        str1[i + taille1] = '\0';
+    }
+    
     return str1;
 }
 
@@ -54,9 +60,13 @@ char * o_strjoin(int size, char **arr, char *sep)
 
     for(int i = 0; i < size; i++)
     {
-        printf("arr = [%s]\n", arr[i]);
+        //printf("arr = [%s]\n", arr[i]);
+
         o_strcat(tab,arr[i]);
+        //printf("tab = [%s]\n", tab);
+
         o_strcat(tab,sep);
+        //printf("tab = [%s]\n", tab);
     }
 
     return tab;
