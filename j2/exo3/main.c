@@ -24,34 +24,55 @@ int o_strlen(char *str)
 
 int o_strcmp(char *str1, char *str2)
 {
-    int taille1 = o_strlen(str1);
-    int taille2 = o_strlen(str2);
+    // int taille1 = o_strlen(str1);
+    // int taille2 = o_strlen(str2);
 
-    if(taille1 != taille2)
-    {
-        if(taille1 < taille2)
-        {
-            return str1[taille1] - str2[taille1];
-        }
+    // if(taille1 != taille2)
+    // {
+    //     if(taille1 < taille2)
+    //     {
+    //         return str1[taille1] - str2[taille1];
+    //     }
 
-        else
-        {
-            return str1[taille2] - str2[taille2];
-        }
+    //     else
+    //     {
+    //         return str1[taille2] - str2[taille2];
+    //     }
         
+    // }
+
+    // for(int i = 0; str1[i] != 0 && str2[i] != 0; i++)
+    // {
+    //     printf("%s \n",str1[i] - str2[i]);
+    //     if(str1[i] - str2[i] < 0)
+    //     {
+    //         printf("Je suis la \n");
+    //         return -1;
+    //     }
+
+    //     if(str1[i] - str2[i] > 0)
+    //     {
+    //         printf("Je suis la 2\n");
+    //         return 1;
+    //     }
+
+
+    int i;
+    for (i = 0; str1[i] && str2[i]; i++) 
+    {
+        if (str1[i] - str2[i] != 0) 
+        {
+            return (str1[i] - str2[i]);
+        }
+    }
+    if (!str1[i] && str2[i])
+    {
+        return -str2[i];
     }
 
-    for(int i = 0; str1[i] != 0 && str2[i] != 0; i++)
+    if (!str2[i] && str1[i])
     {
-        if(str1[i] - str2[i] < 0)
-        {
-            return -1;
-        }
-
-        if(str1[i] - str2[i] > 0)
-        {
-            return 1;
-        }
+        return str1[i];
     }
 
     return 0;
