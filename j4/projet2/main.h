@@ -32,12 +32,11 @@ Question tab_questions[]={
     {20,"Jouons un peu ! Selon vous, le plus ancien jeu connu est:",{"Le bowling","Le jeu de cartes","La pétanque"},1},
     {21,"Quel était le but de la terrifiante 'expérience de Stanford' ?",{"Observer la tendance des gens à adhérer à une certaine idéologie et à se soumettre à l’autorité.","Savoir combien de temps un être humain pouvait être privé de sommeil avant de sombrer dans la folie.","Evaluer le degré maximal de douleur à atteindre chez un humain avant de tomber en syncope."},1},
     {22,"Si la Terre était plate, jusqu'à quelle distance l’oeil humain pourrait voir la lueur d’une bougie ?",{"6 km","19 km","48 km"},3},
-    {23,"De quand date la toute première bd jamais publiée ?",{"1848","1896","1924"},2,
+    {23,"De quand date la toute première bd jamais publiée ?",{"1848","1896","1924"},2},
     {24,"En moyenne, combien de km l'être humain parcoure-t-il à pied au cours de sa vie ?",{"62 000 Km","195 000 Km","257 000 Km"},2},
     {25,"Comment s'appelle l'un des animaux les plus stupides du monde ?",{"La loutre bigleuse","Le Kakapo","Le paresseux"},2},
     {26,"Au cours d'une nuit, nous rêvons pendant environ...",{"60 mintues","100 mintues","150 mintues"},2},
     {27,"A votre avis, combien de kilos de nourriture un homme ingère-t-il au cours de sa vie, en moyenne ?",{"15 000 kg","30 000 kg","50 000 kg"},3},
-    {28,"Le plus grand escalator du monde se trouve...",{"A "Monument Valley", aux Etats-Unis","A St Pétersbourg, en Russie","A Melbourne, en Australie"},2},
-    {29,"",{"","",""},1},
+    {28,"Le plus grand escalator du monde se trouve...",{"A 'Monument Valley', aux Etats-Unis","A St Pétersbourg, en Russie","A Melbourne, en Australie"},2},
  
 };
